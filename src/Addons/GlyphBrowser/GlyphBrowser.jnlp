@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="GlyphBrowser.jnlp">
+    <information>
+        <title>GlyphBrowser</title>
+        <vendor>Unknown</vendor>
+        <description>GlyphBrowser</description>
+        <offline-allowed/>
+    </information>
+    <update check="background"/>
+    <resources>
+        <j2se version="9.0.4+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="GlyphBrowser.jar" size="1830" download="eager"/>
+        <jar href="fontawesomefx-8.1.jar" size="179086" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="600" height="400" main-class="GlyphBrowser.GlyphBrowser" name="GlyphBrowser"/>
+</jnlp>
+
