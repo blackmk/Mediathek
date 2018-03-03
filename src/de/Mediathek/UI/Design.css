@@ -1,0 +1,34 @@
+.background{
+-fx-background-color:#204C57;
+}
+.background2{
+-fx-background-color:#478594;
+}
+.background3{
+ -fx-background-color:#6EA3B8;
+ }
+.buttonsimple{
+-fx-text-fill:white;
+-fx-font-size:15px;
+-icons-color:white;
+}
+.glyph-icon{
+    -fx-text-fill: -icons-color;
+    -fx-fill: -icons-color;
+    -glyph-size: 48px;
+}
+
+.text1{
+    -fx-font-size:17px;
+    -fx-background-color: #13393D;
+    -fx-alignment: center;
+    -fx-text-fill: #B2CED9;
+
+}
+
+.text2{
+    -fx-alignment: center;
+    -fx-text-fill: #204C57;
+    -fx-font-size:15px;
+
+}
