@@ -12,8 +12,11 @@ import java.util.ResourceBundle;
 public class SoftwareController implements Initializable{
     @FXML
     public AnchorPane artikelPane;
+    @FXML
     public AnchorPane mitarbeiterPane;
+    @FXML
     public AnchorPane kundenPane;
+    @FXML
     public ChoiceBox<Fenster> navigationChoiceBox;
 
     private Fenster fenster;

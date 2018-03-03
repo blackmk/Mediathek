@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.Icon?>
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="1198.0" stylesheets="@Design.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.Mediathek.UI.SoftwareController">
    <children>
@@ -25,10 +24,12 @@
             <ChoiceBox fx:id="navigationChoiceBox" layoutX="14.0" layoutY="53.0" prefHeight="25.0" prefWidth="127.0" />
             <AnchorPane fx:id="artikelSidePane" layoutY="85.0" prefHeight="429.0" prefWidth="149.0" styleClass="background">
                <children>
-                  <JFXButton layoutX="43.0" layoutY="53.0" prefHeight="24.0" prefWidth="92.0" text="Anlegen" />
-                  <JFXButton layoutX="43.0" layoutY="137.0" prefHeight="24.0" prefWidth="92.0" text="Bearbeiten" />
-                  <JFXButton layoutX="43.0" layoutY="215.0" prefHeight="24.0" prefWidth="92.0" text="Löschen" />
-                  <Icon content="HELP_OUTLINE" layoutX="39.0" layoutY="57.0" />
+                  <JFXButton layoutX="31.0" layoutY="53.0" prefHeight="50.0" prefWidth="104.0" text="Anlegen" />
+                  <JFXButton layoutX="37.0" layoutY="132.0" prefHeight="50.0" prefWidth="92.0" text="Bearbeiten" />
+                  <JFXButton layoutX="37.0" layoutY="215.0" prefHeight="57.0" prefWidth="92.0" text="Löschen">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="ARROW_UP" />
+                     </graphic></JFXButton>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="kundenSidePane" layoutY="85.0" prefHeight="429.0" prefWidth="149.0" styleClass="background2" visible="false" />
