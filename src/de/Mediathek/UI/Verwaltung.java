@@ -13,6 +13,11 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+/*
+*   Project Mediathek 03.03.2018
+*   Blackmk : Origin
+ */
+
 public class Verwaltung extends Application{
     private static Mitarbeiter Currnetuser;
     private ObservableList<Artikel> artikelliste;
