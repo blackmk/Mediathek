@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="674.0" prefWidth="840.0" styleClass="background2" stylesheets="@../darktheme.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Mediathek.GUI.Ausleihen.ArtikelAusleihen">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" styleClass="titleText" text="Artikel Ausleihen" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Label fx:id="target" layoutX="171.0" layoutY="15.0" styleClass="titlenormal" text="Kunde" AnchorPane.leftAnchor="171.0" AnchorPane.topAnchor="15.0" />
+      <VBox layoutY="77.0" prefHeight="524.0" prefWidth="840.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="77.0">
+         <children>
+            <TableView fx:id="freieListe" prefHeight="274.0" prefWidth="820.0" />
+            <AnchorPane prefHeight="136.0" prefWidth="840.0" VBox.vgrow="NEVER">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="63.0" prefWidth="840.0" spacing="20.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#pushUp" prefHeight="50.0" prefWidth="30.0" styleClass="blueButton" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="ANGLE_DOUBLE_UP" size="2em" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#pushDown" prefHeight="50.0" prefWidth="30.0" styleClass="blueButton" text=" " HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="ANGLE_DOUBLE_DOWN" size="2em" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <AnchorPane prefHeight="33.0" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="3.0" styleClass="titleText" text="Warenkorb" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="3.0" />
+                        <Label fx:id="warenkorbText" layoutX="121.0" layoutY="4.0" styleClass="titlenormal" text="0 von 0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="warenkorbListe" prefHeight="284.0" prefWidth="820.0" />
+         </children>
+      </VBox>
+      <Label layoutX="14.0" layoutY="55.0" styleClass="titleText" text="Freie Artikel" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="55.0" />
+      <Label fx:id="freeText" layoutX="125.0" layoutY="56.0" styleClass="titlenormal" text="0 von 0" />
+      <JFXButton buttonType="RAISED" layoutX="722.0" layoutY="620.0" onAction="#ausleihen" prefHeight="40.0" prefWidth="104.0" styleClass="blueButton" text="Ausleihen" />
+   </children>
+</AnchorPane>

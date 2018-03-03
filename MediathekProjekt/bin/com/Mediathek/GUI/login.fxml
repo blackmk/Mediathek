@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="616.0" styleClass="background" stylesheets="@darktheme.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Mediathek.GUI.Login">
+   <children>
+      <Label layoutX="236.0" layoutY="22.0" styleClass="textshadow" text="Media" textFill="WHITE">
+         <font>
+            <Font name="Strasua-Regular" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="22.0" styleClass="textshadow" text="thek" textFill="#3095ff">
+         <font>
+            <Font name="Strasua-Regular" size="25.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwort" layoutX="161.0" layoutY="200.0" prefHeight="25.0" prefWidth="279.0" promptText="Passwort" styleClass="textfield" />
+      <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="128.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+         <image>
+            <Image url="@../../../../resources/userwhite.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="130.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+         <image>
+            <Image url="@../../../../resources/lock.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="loginmessage" alignment="CENTER" layoutX="130.0" layoutY="331.0" prefHeight="20.0" prefWidth="344.0" styleClass="error" textAlignment="CENTER" />
+      <JFXButton fx:id="login" buttonType="RAISED" layoutX="226.0" layoutY="263.0" onAction="#anmelden" prefHeight="32.0" prefWidth="149.0" ripplerFill="WHITE" styleClass="buttonSimple" text="Login" />
+      <TextField fx:id="benutzername" layoutX="162.0" layoutY="151.0" prefHeight="25.0" prefWidth="279.0" promptText="Benutzername" styleClass="textfield" stylesheets="@darktheme.css" />
+   </children>
+</AnchorPane>

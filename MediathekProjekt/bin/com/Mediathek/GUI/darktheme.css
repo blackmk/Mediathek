@@ -1,0 +1,176 @@
+.background{
+    -fx-background-color:  #3D4552;
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #3D4552 0%, derive(#3D4552,-10%) 100%)
+
+}
+.background2
+{
+   -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, #FFFFFF 0%, #DDDDDD 100%);
+}
+.background3{
+    -fx-background-color:  #3D4552;
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, derive(#3D4552,-10%) 0%, derive(#3D4552,-30%) 100%)
+
+}
+
+
+.backgroundWhite
+{
+   -fx-background-color: #EFefef;
+}
+
+.textshadow
+{
+    -fx-effect: dropshadow(gaussian,#00000055,15,0.4,3,3);
+}
+
+.textProfil
+ {
+     -fx-effect: dropshadow(gaussian,#00000055,15,0.4,3,3);
+     -fx-text-fill: #555555;
+     -fx-font-size:15;
+ }
+
+ .textProfil2
+ {
+     -fx-background-color: white;
+     -fx-effect: dropshadow(gaussian,#00000055,15,0.4,3,3);
+     -fx-text-fill: #000000;
+     -fx-font-size:15;
+ }
+
+.textfield
+{
+    -fx-background-color: #00000000;
+    -fx-border-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 50% , white, #00000000);
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+
+    -fx-font: 14px system;
+    -fx-prompt-text-fill:derive(white,-30%);
+    -fx-text-fill:white;
+
+    -fx-effect: dropshadow(gaussian,#00000011,15,0.4,3,3);
+}
+
+.buttonJira
+ {
+     -fx-background-color: #00000000;
+     -fx-border-color: #00000000;
+     -fx-text-fill: #FFFFFF;
+     -fx-font-family: strasua;
+     -fx-font-size: 15;
+ }
+.buttonJira:hover
+{
+    -fx-background-color: #00000022;
+}
+
+.buttonJira2
+{
+    -fx-background-color: #00000011;
+    -fx-border-color: #00000011;
+    -fx-font-family: strasua;
+    -fx-text-fill: white;
+
+    -fx-font-size: 15;
+}
+.buttonJira2:hover
+{
+    -fx-background-color: #00000022;
+}
+
+.buttonSimple
+ {
+     -fx-background-color: #FFFFFF;
+     -fx-background-radius: 15;
+     -fx-effect: dropshadow(gaussian,#00000055,15,0.4,3,3);
+ }
+
+ .buttonSimple:hover
+ {
+     -fx-background-color: #FFFFFF;
+     -fx-background-radius: 15;
+     -fx-effect: dropshadow(gaussian,#00000055,30,0.4,3,3);
+ }
+
+ .buttonSimple:pressed
+ {
+     -fx-background-color: derive(#FFFFFF,-30%);
+     -fx-background-radius: 15;
+     -fx-effect: dropshadow(gaussian,#00000055,15,0.4,3,3);
+ }
+
+.simpleButtonRed
+{
+    -fx-font: 0px system;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, derive(red,100%) 0%, red 100%);
+
+}
+
+.simpleButtonRed:hover
+{
+    -fx-font: 0px system;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, derive(red,50%) 0%, red 100%);
+
+}
+
+.blueButton
+{
+    -fx-background-color:#0074ff;
+    -fx-font-size:15;
+    -fx-text-fill:white;
+    -fx-text-effect:bold;
+}
+
+.textplain
+{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian,#00000055,15,0.4,3,3);
+}
+
+.titleText
+{
+    -fx-font-family:strasua;
+    -fx-font-size: 17;
+    -fx-text-fill:black;
+}
+
+.titlenormal
+{
+    -fx-font-family:system;
+    -fx-font-size: 14;
+    -fx-text-fill:grey;
+}
+
+.icon
+{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian,#00000055,15,0.4,3,3);
+}
+
+.error
+{
+    -fx-font: 14px system;
+    -fx-text-fill:red;
+    -fx-effect: dropshadow(gaussian,#00000055,15,0.4,3,3);
+}
+
+.textBlackSimple
+{
+    -fx-font-size:16;
+    -fx-font-family:system;
+    -fx-text-fill:#111111;
+
+}
+
+.textfieldTransparent
+{
+    -fx-background-color:#00000010;
+}

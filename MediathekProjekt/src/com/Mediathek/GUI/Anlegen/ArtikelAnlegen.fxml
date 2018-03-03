@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="600.0" styleClass="background2" stylesheets="@../darktheme.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Mediathek.GUI.Anlegen.ArtikelAnlegen">
+   <children>
+      <ChoiceBox fx:id="artikelAnlegenChoicebox" layoutX="25.0" layoutY="62.0" prefHeight="32.0" prefWidth="207.0" styleClass="buttonJira2" />
+      <Label layoutX="232.0" layoutY="14.0" stylesheets="@../darktheme.css" text="Artikel Anlegen" textFill="#0084ff">
+         <styleClass>
+            <String fx:value="titleText" />
+            <String fx:value="textshadow" />
+         </styleClass>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="472.0" layoutY="551.0" onAction="#fertigstellen" prefHeight="35.0" prefWidth="102.0" ripplerFill="#0079ff" styleClass="blueButton" text="Fertigstellen" />
+      <JFXTextField fx:id="bezeichnungField" focusColor="#0079ff" labelFloat="true" layoutX="27.0" layoutY="141.0" prefHeight="25.0" prefWidth="546.0" promptText="Bezeichnung" unFocusColor="#6f6e6e" />
+      <JFXTextField fx:id="preisField" focusColor="#0079ff" labelFloat="true" layoutX="27.0" layoutY="198.0" prefHeight="25.0" prefWidth="546.0" promptText="Preis" unFocusColor="#6f6e6e" />
+      <JFXDatePicker fx:id="erscheinungsjahrField" defaultColor="#0079ff" layoutX="27.0" layoutY="251.0" prefHeight="28.0" prefWidth="546.0" promptText="Erscheinungsjahr" />
+      <JFXTextField fx:id="interpretField" focusColor="#0079ff" layoutX="27.0" layoutY="306.0" prefHeight="25.0" prefWidth="546.0" promptText="Interpret" unFocusColor="#6f6e6e" />
+      <JFXTextField fx:id="verlagField" focusColor="#0079ff" layoutX="27.0" layoutY="306.0" prefHeight="25.0" prefWidth="546.0" promptText="Verlag" unFocusColor="#6f6e6e" />
+      <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="551.0" onAction="#abbrechen" prefHeight="35.0" prefWidth="102.0" ripplerFill="#0079ff" styleClass="blueButton" text="Abbrechen" />
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AbstrakteKlassen.jnlp">
+    <information>
+        <title>GuiController</title>
+        <vendor>Unknown</vendor>
+        <description>GuiController</description>
+        <offline-allowed/>
+    </information>
+    <security>
+        <all-permissions/>
+    </security>
+    <update check="background"/>
+    <resources>
+        <j2se version="9.0.4+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="AbstrakteKlassen.jar" size="154020" download="eager"/>
+        <jar href="resources\jfoenix-9.0.1.jar" size="2143605" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="600" height="400" main-class="com.Mediathek.GUI.GuiController" name="GuiController"/>
+</jnlp>
+

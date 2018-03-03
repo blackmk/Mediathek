@@ -1,0 +1,5 @@
+<root>
+    <item name='javafx.scene.control.TableView void setItems(javafx.collections.ObservableList&lt;S&gt;)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
