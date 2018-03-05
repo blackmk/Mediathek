@@ -15,7 +15,9 @@ public class GuiController extends Application{
     private static Stage stage;
     private static Stage stage2;
     private static Stage stage3;
+
     private static Stage stage4;
+
     private static Stage stage5;
     private static Scene loginScene;
     private static Scene softwareScene;
@@ -23,7 +25,6 @@ public class GuiController extends Application{
     private static Scene kundeAnlegenScene;
     private static Scene artikelAusleihenScene;
     private static Scene mitarbeiterAnlegenScene;
-
     private static MSystem mSystem;
 
     public static void main(String[] args) {
@@ -122,6 +123,11 @@ public class GuiController extends Application{
 
     public static Stage getStage3(){
         return stage3;
+    }
+
+    public static Stage getStage4()
+    {
+        return stage4;
     }
 
     public static Stage getStage5()

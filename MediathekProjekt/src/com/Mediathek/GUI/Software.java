@@ -123,6 +123,8 @@ public class Software implements Initializable {
 
         //noinspection unchecked
         dataMitarbeiter.addListener((ListChangeListener<? super Mitarbeiter>) c -> aktualisiereMitarbeiterTable());
+
+
     }
 
     public void profileButton()
@@ -367,6 +369,7 @@ public class Software implements Initializable {
         kundenTableView.setItems(dataKunde);
         vboxKunden.setSpacing(5);
 
+        aktualisiereAusgeliehenTable();
     }
 
     @SuppressWarnings("unchecked")
@@ -502,6 +505,7 @@ public class Software implements Initializable {
         String tmpText = ++sel + " von " + tmp;
         listSizeKunden.setText(tmpText);
         changeSelectedTextAusgeliehen();
+        aktualisiereAusgeliehenTable();
     }
 
     public void changeSelectedTextMitarbeiter()

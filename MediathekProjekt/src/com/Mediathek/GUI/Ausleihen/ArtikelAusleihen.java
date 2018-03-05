@@ -31,9 +31,9 @@ public class ArtikelAusleihen implements Initializable
     @FXML
     Label warenkorbText;
     @FXML
-    TableView<Artikel> freieListe;
+    TableView freieListe;
     @FXML
-    TableView<Artikel> warenkorbListe;
+    TableView warenkorbListe;
 
     private static ObservableList<Artikel> freieArtikelListe;
     private static ObservableList<Artikel> warenkorbArtikelListe;
@@ -57,14 +57,71 @@ public class ArtikelAusleihen implements Initializable
 
         freieArtikelListe.addListener((ListChangeListener<? super Artikel>) c -> aktualisiereFreieListe());
         warenkorbArtikelListe.addListener((ListChangeListener<? super Artikel>) c -> aktualisiereWarenkorbListe());
+        GuiController.getStage4().setOnShowing(event -> windowOpen());
+    }
+
+    public void windowOpen()
+    {
+        changeTarget();
+        int selectedIndex = Software.sk.getSelectedIndex();
+        Kunde kunde = GuiController.getmSystem().getKundenListe().get(selectedIndex);
+        warenkorbArtikelListe.clear();
+        warenkorbArtikelListe.addAll(kunde.getAusgeliehenListe());
+        aktualisiereWarenkorbListe();
+        aktualisiereFreieListe();
     }
 
     private void aktualisiereFreieListe()
     {
         freieListe.setEditable(false);
+
+        TableColumn<Artikel, Number> idCol = new TableColumn<>("ID");
+        idCol.setCellValueFactory(new PropertyValueFactory<>("ID"));
+
+        TableColumn<Artikel, Type> typeCol= new TableColumn<>("Typ");
+        typeCol.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+        TableColumn<Artikel, String> bezeichnungCol = new TableColumn<>("Bezeichnung");
+        bezeichnungCol.setCellValueFactory(new PropertyValueFactory<>("bezeichnung"));
+
+        TableColumn<Artikel, Number> preisCol = new TableColumn<>("Preis");
+        preisCol.setCellValueFactory(new PropertyValueFactory<>("preis"));
+
+        TableColumn<Artikel, String> erscheinungsjahrCol = new TableColumn<>("Erscheinungsjahr");
+        erscheinungsjahrCol.setCellValueFactory(new PropertyValueFactory<>("erscheinungsjahr"));
+
+        TableColumn<Artikel, String> ausleihdatumCol = new TableColumn<>("Ausleihdatum");
+        ausleihdatumCol.setCellValueFactory(new PropertyValueFactory<>("ausleihdatum"));
+
+        TableColumn<Artikel, String> statusCol = new TableColumn<>("Ausgeliehen");
+        statusCol.setCellValueFactory(new PropertyValueFactory<>("ausgeliehen"));
+
+        //TODO: Die Fehlermeldung der nicht gefundenen Attribute entfernen
+        TableColumn<Buch, String> verlagCol = new TableColumn<>("Verlag");
+        verlagCol.setCellValueFactory(new PropertyValueFactory<>("verlag"));
+
+        TableColumn<Buch, String> interpretCol = new TableColumn<>("Interpret");
+        interpretCol.setCellValueFactory(new PropertyValueFactory<>("interpret"));
+
+
+        idCol.setPrefWidth(50);
+        idCol.setResizable(false);
+        typeCol.setPrefWidth(70);
+        bezeichnungCol.setPrefWidth(200);
+        preisCol.setPrefWidth(100);
+        erscheinungsjahrCol.setPrefWidth(200);
+        ausleihdatumCol.setPrefWidth(200);
+        statusCol.setPrefWidth(100);
+        verlagCol.setPrefWidth(150);
+        interpretCol.setPrefWidth(150);
+
+        //noinspection unchecked
+        freieListe.getColumns().setAll(idCol,typeCol,bezeichnungCol,preisCol,erscheinungsjahrCol,ausleihdatumCol,statusCol,verlagCol,interpretCol);
+        //noinspection unchecked
+        freieListe.setItems(freieArtikelListe);
     }
 
-    private void aktualisiereWarenkorbListe() {
+    public void aktualisiereWarenkorbListe() {
         warenkorbListe.setEditable(false);
 
         TableColumn<Artikel, Number> idCol = new TableColumn<>("ID");
@@ -108,13 +165,15 @@ public class ArtikelAusleihen implements Initializable
         interpretCol.setPrefWidth(150);
 
         //noinspection unchecked
-        //warenkorbListe.getColumns().setAll(idCol,typeCol,bezeichnungCol,preisCol,erscheinungsjahrCol,ausleihdatumCol,statusCol,verlagCol,interpretCol);
+        warenkorbListe.getColumns().setAll(idCol,typeCol,bezeichnungCol,preisCol,erscheinungsjahrCol,ausleihdatumCol,statusCol,verlagCol,interpretCol);
+        //noinspection unchecked
+        warenkorbListe.setItems(warenkorbArtikelListe);
     }
 
     public void changeTarget() {
         int selectedIndex = Software.sk.getSelectedIndex();
         Kunde kunde = GuiController.getmSystem().getKundenListe().get(selectedIndex);
-        setTarget(kunde.getKundenNummer()+ " : " + kunde.getVorname() + " " + kunde);
+        setTarget(kunde.getKundenNummer()+ " : " + kunde.getVorname() + " " + kunde.getName());
     }
 
     private void setTarget(String text)
@@ -126,17 +185,27 @@ public class ArtikelAusleihen implements Initializable
     {
         //TODO:
         int sel = warenkorbListe.getSelectionModel().getFocusedIndex();
+        freieArtikelListe.add(warenkorbArtikelListe.get(sel));
         warenkorbArtikelListe.remove(sel);
-
     }
 
     public void pushDown()
     {
-
+        int sel = freieListe.getSelectionModel().getFocusedIndex();
+        warenkorbArtikelListe.add(freieArtikelListe.get(sel));
+        freieArtikelListe.remove(sel);
     }
 
     public void ausleihen()
     {
-
+        for(int i = 0; i < warenkorbArtikelListe.size(); i++)
+        {
+            warenkorbArtikelListe.get(i).setStatus(true);
+        }
+        int selectedIndex = Software.sk.getSelectedIndex();
+        Kunde kunde = GuiController.getmSystem().getKundenListe().get(selectedIndex);
+        kunde.getAusgeliehenListe().clear();
+        kunde.getAusgeliehenListe().addAll(warenkorbArtikelListe);
+        GuiController.getStage4().close();
     }
 }
