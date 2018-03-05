@@ -62,6 +62,18 @@ public class ArtikelAusleihen implements Initializable
 
     public void windowOpen()
     {
+        warenkorbArtikelListe = FXCollections.observableArrayList(new ArrayList<Artikel>());
+
+        for(int i = 0; i < warenkorbArtikelListe.size(); i++)
+            if(warenkorbArtikelListe.get(i).isStatus())
+                warenkorbArtikelListe.remove(i);
+
+        freieArtikelListe = FXCollections.observableArrayList(GuiController.getmSystem().getArtikelListe());
+
+        for(int i = 0; i < freieArtikelListe.size(); i++)
+            if(freieArtikelListe.get(i).isStatus())
+                freieArtikelListe.remove(i);
+
         changeTarget();
         int selectedIndex = Software.sk.getSelectedIndex();
         Kunde kunde = GuiController.getmSystem().getKundenListe().get(selectedIndex);
@@ -183,7 +195,6 @@ public class ArtikelAusleihen implements Initializable
 
     public void pushUp()
     {
-        //TODO:
         int sel = warenkorbListe.getSelectionModel().getFocusedIndex();
         freieArtikelListe.add(warenkorbArtikelListe.get(sel));
         warenkorbArtikelListe.remove(sel);

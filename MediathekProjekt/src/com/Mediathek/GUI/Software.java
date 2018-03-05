@@ -1,5 +1,6 @@
 package com.Mediathek.GUI;
 
+
 import com.Mediathek.Artikel.Artikel;
 import com.Mediathek.Artikel.Buch;
 import com.Mediathek.Artikel.Type;
@@ -296,6 +297,7 @@ public class Software implements Initializable {
         listSizeArtikel.setText(tmpText);
     }
 
+
     //===================================//
     //              Kunden               //
     //===================================//
@@ -435,7 +437,10 @@ public class Software implements Initializable {
 
     public void artikelZurueckgeben()
     {
-
+        Kunde k = GuiController.getmSystem().getKundenListe().get(kundenTableView.getSelectionModel().getFocusedIndex());
+        int focusedIndex = ausgeliehenTableView.getSelectionModel().getFocusedIndex();
+        k.getAusgeliehenListe().remove(k.getAusgeliehenListe().get(focusedIndex));
+        aktualisiereKundenTable();
     }
 
     //===================================//
