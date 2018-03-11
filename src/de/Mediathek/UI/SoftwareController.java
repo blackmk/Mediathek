@@ -9,15 +9,13 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SoftwareController implements Initializable{
+public class SoftwareController{
     @FXML
-    public AnchorPane artikelPane;
+    public AnchorPane artikelAnchor;
     @FXML
-    public AnchorPane mitarbeiterPane;
+    public AnchorPane mitarbeiterAnchor;
     @FXML
-    public AnchorPane kundenPane;
-    @FXML
-    public ChoiceBox<Fenster> navigationChoiceBox;
+    public AnchorPane kundenAnchor;
 
     private Fenster fenster;
 
@@ -39,31 +37,23 @@ public class SoftwareController implements Initializable{
     public void changeFenster(){
         switch (fenster) {
             case Artikel:
-                artikelPane.setVisible(true);
-                kundenPane.setVisible(false);
-                mitarbeiterPane.setVisible(false);
+                artikelAnchor.setVisible(true);
+                kundenAnchor.setVisible(false);
+                mitarbeiterAnchor.setVisible(false);
                 break;
             case Kunde:
-                artikelPane.setVisible(false);
-                kundenPane.setVisible(true);
-                mitarbeiterPane.setVisible(false);
+                artikelAnchor.setVisible(false);
+                kundenAnchor.setVisible(true);
+                mitarbeiterAnchor.setVisible(false);
                 break;
             case Mitarbeiter:
-                artikelPane.setVisible(false);
-                kundenPane.setVisible(false);
-                mitarbeiterPane.setVisible(true);
+                artikelAnchor.setVisible(false);
+                kundenAnchor.setVisible(false);
+                mitarbeiterAnchor.setVisible(true);
                 break;
         }
 
     }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        navigationChoiceBox.getItems().addAll(Fenster.Artikel,Fenster.Kunde,Fenster.Mitarbeiter);
-        navigationChoiceBox.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue)-> aktualisieren());
-        navigationChoiceBox.setValue(Fenster.Artikel);
-    }
-
     public void aktualisieren()
     {
 
