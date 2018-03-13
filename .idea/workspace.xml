@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa014a66-eda2-45bd-820b-d361637997a7" name="Default" comment="push">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/de/Mediathek/Artikel/Type.java" />
+    <list default="true" id="fa014a66-eda2-45bd-820b-d361637997a7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/Artikel/Artikel.class" afterPath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/Artikel/Artikel.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/UI/Software.fxml" afterPath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/UI/Software.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/UI/SoftwareController$1.class" afterPath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/UI/SoftwareController$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/UI/SoftwareController.class" afterPath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/UI/SoftwareController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/UI/Verwaltung.class" afterPath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/UI/Verwaltung.class" />
-      <change beforePath="$PROJECT_DIR$/src/de/Mediathek/Artikel/Artikel.java" afterPath="$PROJECT_DIR$/src/de/Mediathek/Artikel/Artikel.java" />
-      <change beforePath="$PROJECT_DIR$/src/de/Mediathek/Person/Kunde.java" afterPath="$PROJECT_DIR$/src/de/Mediathek/Person/Kunde.java" />
-      <change beforePath="$PROJECT_DIR$/src/de/Mediathek/UI/Software.fxml" afterPath="$PROJECT_DIR$/src/de/Mediathek/UI/Software.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/de/Mediathek/UI/SoftwareController.java" afterPath="$PROJECT_DIR$/src/de/Mediathek/UI/SoftwareController.java" />
-      <change beforePath="$PROJECT_DIR$/src/de/Mediathek/UI/Verwaltung.java" afterPath="$PROJECT_DIR$/src/de/Mediathek/UI/Verwaltung.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/Person/Kunde.class" afterPath="$PROJECT_DIR$/out/production/Mediathek/de/Mediathek/Person/Kunde.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -172,10 +162,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="20" />
+    <option name="y" value="-21" />
+    <option name="width" value="1248" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -384,6 +374,14 @@
       <option name="presentableId" value="Default" />
       <updated>1520773413938</updated>
     </task>
+    <task id="LOCAL-00001" summary="push">
+      <created>1520967581567</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1520967581567</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
