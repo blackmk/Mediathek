@@ -20,11 +20,12 @@ import java.util.ArrayList;
 
 public class Verwaltung extends Application{
     private static Mitarbeiter Currnetuser;
-    private ObservableList<Artikel> artikelliste;
-    private ObservableList<Mitarbeiter> mitarrbeiterliste;
-    private ObservableList<Kunde> kundenliste;
+    private static ObservableList<Artikel> artikelliste;
+    private static ObservableList<Mitarbeiter> mitarrbeiterliste;
+    private static ObservableList<Kunde> kundenliste;
     private Scene softwareScene;
-    private Stage stage;
+    private static Stage stage;
+    private static Stage stage2;
 
     public static void main(String[] args) {
         launch(args);
@@ -61,7 +62,7 @@ public class Verwaltung extends Application{
         Currnetuser = currnetuser;
     }
 
-    public ObservableList<Artikel> getArtikelliste() {
+    public static ObservableList<Artikel> getArtikelliste() {
         return artikelliste;
     }
 
@@ -69,7 +70,7 @@ public class Verwaltung extends Application{
         this.artikelliste = artikelliste;
     }
 
-    public ObservableList<Mitarbeiter> getMitarrbeiterliste() {
+    public static ObservableList<Mitarbeiter> getMitarrbeiterliste() {
         return mitarrbeiterliste;
     }
 
@@ -77,7 +78,7 @@ public class Verwaltung extends Application{
         this.mitarrbeiterliste = mitarrbeiterliste;
     }
 
-    public ObservableList<Kunde> getKundenliste() {
+    public static ObservableList<Kunde> getKundenliste() {
         return kundenliste;
     }
 

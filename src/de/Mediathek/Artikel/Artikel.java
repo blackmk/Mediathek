@@ -3,17 +3,25 @@ package de.Mediathek.Artikel;
 import java.util.Date;
 
 public class Artikel {
+    protected Type type;
     protected String bezeichnung;
     protected double preis;
     protected int erscheinungsjahr;
     protected Date ausleihdatum;
     protected boolean status;
 
-
     public Artikel(String bezeichnung, double preis, int erscheinungsjahr) {
         setBezeichnung(bezeichnung);
         setPreis(preis);
         setErscheinungsjahr(erscheinungsjahr);
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 
     public String getBezeichnung() {
@@ -54,6 +62,14 @@ public class Artikel {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public String getAusgeliehen()
+    {
+        if(isStatus())
+            return "Verliehen";
+        else
+            return "Frei";
     }
 
 

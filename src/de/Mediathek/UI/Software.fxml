@@ -5,6 +5,7 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -26,38 +27,47 @@
             </Label>
             <VBox alignment="CENTER" layoutX="-2.0" layoutY="98.0" prefHeight="454.0" prefWidth="180.0" spacing="20.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
                <children>
-                  <JFXButton fx:id="anlegenButton" buttonType="RAISED" graphicTextGap="6.0" prefHeight="30.0" prefWidth="150.0" styleClass="menuButton" text="Anlegen" VBox.vgrow="ALWAYS">
+                  <JFXButton fx:id="anlegenButton" buttonType="RAISED" graphicTextGap="6.0" onAction="#anlegen" prefHeight="30.0" prefWidth="150.0" styleClass="menuButton" text="Anlegen" VBox.vgrow="ALWAYS">
                      <graphic>
                         <FontAwesomeIcon iconName="PLUS" size="2em" styleClass="glyph-icon" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="bearbeitenButton" buttonType="RAISED" graphicTextGap="6.0" prefHeight="30.0" prefWidth="150.0" styleClass="menuButton" text="Bearbeiten" VBox.vgrow="ALWAYS">
+                  <JFXButton fx:id="bearbeitenButton" buttonType="RAISED" graphicTextGap="6.0" onAction="#bearbeiten" prefHeight="30.0" prefWidth="150.0" styleClass="menuButton" text="Bearbeiten" VBox.vgrow="ALWAYS">
                      <graphic>
                         <FontAwesomeIcon iconName="PENCIL" size="2em" styleClass="glyph-icon" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="loeschenButton" buttonType="RAISED" graphicTextGap="6.0" prefHeight="30.0" prefWidth="150.0" styleClass="menuButton" text="Löschen" VBox.vgrow="ALWAYS">
+                  <JFXButton fx:id="loeschenButton" buttonType="RAISED" graphicTextGap="6.0" onAction="#loeschen" prefHeight="30.0" prefWidth="150.0" styleClass="menuButton" text="Löschen" VBox.vgrow="ALWAYS">
                      <graphic>
                         <FontAwesomeIcon iconName="REMOVE" size="2em" styleClass="glyph-icon" />
                      </graphic>
                   </JFXButton>
                </children>
             </VBox>
-            <JFXButton fx:id="logoutButton" buttonType="RAISED" layoutX="14.0" layoutY="563.0" prefHeight="26.0" prefWidth="150.0" styleClass="menuButton" text="Logout" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0">
+            <JFXButton fx:id="logoutButton" buttonType="RAISED" layoutX="14.0" layoutY="563.0" onAction="#logout" prefHeight="35.0" prefWidth="150.0" styleClass="menuButton" text="Logout" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0">
                <graphic>
                   <FontAwesomeIcon fill="#3c2351" iconName="POWER_OFF" selectionFill="RED" selectionStart="1" size="1.5em" />
                </graphic>
             </JFXButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="artikelAnchor" layoutX="180.0" layoutY="85.0" prefHeight="517.0" prefWidth="1018.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
-      <AnchorPane fx:id="kundenAnchor" layoutX="180.0" layoutY="130.0" prefHeight="504.0" prefWidth="1018.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
-      <AnchorPane fx:id="mitarbeiterAnchor" layoutX="180.0" layoutY="98.0" prefHeight="504.0" prefWidth="1018.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+      <AnchorPane fx:id="artikelAnchor" layoutX="180.0" layoutY="85.0" prefHeight="517.0" prefWidth="1018.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <TableView fx:id="artikelTable" layoutX="99.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="kundenAnchor" layoutX="180.0" layoutY="130.0" prefHeight="504.0" prefWidth="1018.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <TableView fx:id="kundenTable" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="mitarbeiterAnchor" layoutX="180.0" layoutY="98.0" prefHeight="504.0" prefWidth="1018.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <TableView fx:id="mitarbeiterTable" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
       <AnchorPane fx:id="navigationBar" layoutX="180.0" prefHeight="86.0" prefWidth="1018.0" style="-fx-background-color: FFFFFF05;" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="BOTTOM_LEFT" prefHeight="86.0" prefWidth="1018.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXButton fx:id="artikelButton" buttonType="RAISED" prefHeight="60.0" prefWidth="150.0" styleClass="navigationButton" text="Artikel" HBox.hgrow="ALWAYS">
+                  <JFXButton fx:id="artikelButton" buttonType="RAISED" onAction="#artikelButton" prefHeight="60.0" prefWidth="150.0" styleClass="navigationButton" text="Artikel" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -65,12 +75,12 @@
                         <FontAwesomeIcon iconName="BARCODE" selectionEnd="1" size="1.5em" styleClass="glyph-icon" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="kundenButton" buttonType="RAISED" prefHeight="60.0" prefWidth="150.0" styleClass="navigationButton" text="Mitarbeiter" HBox.hgrow="ALWAYS">
+                  <JFXButton fx:id="mitarbeiterButton" buttonType="RAISED" onAction="#mitarbeiterButton" prefHeight="60.0" prefWidth="150.0" styleClass="navigationButton" text="Mitarbeiter" HBox.hgrow="ALWAYS">
                      <graphic>
                         <FontAwesomeIcon iconName="USERS" size="1.5em" styleClass="glyph-icon" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="mitarbeiterButton" buttonType="RAISED" prefHeight="60.0" prefWidth="150.0" styleClass="navigationButton" text="Kunden" HBox.hgrow="ALWAYS">
+                  <JFXButton fx:id="kundenButton" buttonType="RAISED" onAction="#kundenButton" prefHeight="60.0" prefWidth="150.0" styleClass="navigationButton" text="Kunden" HBox.hgrow="ALWAYS">
                      <graphic>
                         <FontAwesomeIcon iconName="GITHUB_ALT" size="1.5em" styleClass="glyph-icon" />
                      </graphic>
